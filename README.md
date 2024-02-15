@@ -1,106 +1,41 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/w3bdesign/laravel-vue-ecommerce/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/w3bdesign/laravel-vue-ecommerce/tree/main)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=w3bdesign_laravel-vue&metric=alert_status)](https://sonarcloud.io/dashboard?id=w3bdesign_laravel-vue)
+## Laravel eCommerce
 
-# Laravel eCommerce
+A modern and scalable eCommerce solution built with Laravel 10, Vue 3, Stripe, and other leading technologies.
 
-Ecommerce site with Laravel 10, Vue 3 and Stripe.
+***
 
-### Screenshot:
+## Key Features 📝
 
- <br /> 
- <img src="https://user-images.githubusercontent.com/45217974/108638044-9b523980-748d-11eb-9a24-0b58baffecc8.png" alt="Project screenshot" /> 
- <br />
- 
- ### Stripe screenshot: 
- <br /> 
- <img src="https://user-images.githubusercontent.com/45217974/108796168-670f7380-7588-11eb-87d5-bc28276f0b35.png" alt="Stripe screenshot" />
- <br />
+* **Robust Product Management:** Manage products, categories, inventory, and pricing with Laravel's administrative capabilities.
+* **Sleek Storefront:**  Engage users with a modern Vue 3 storefront, utilizing Single File Components (SFC) and `<script setup>` syntax.
+* **Efficient State Management:** Leverage Pinia for structured and streamlined Vue state management, persisting user data with `pinia-plugin-persistedstate`.
+* **Powerful Search Integration:** Seamlessly search and discover products using Laravel's robust search capabilities, integrated directly into the Vue front-end.  
+* **Intuitive Order Process:** Simplify checkout with FormKit's streamlined form-building, complete with built-in validation rules.
+* **Secure Payments:**  Utilize Stripe for trusted and secure payment processing.
+* **Flexible Currency Support:** Easily adjust currency using  `CASHIER_CURRENCY` and `CASHIER_CURRENCY_LOCALE` environment variables.
+* **Code Quality & Consistency:** Maintain clean, readable code with Laravel Pint linting.
+* **Visual Appeal:** Enhance user experience with CSS animations and a fully responsive mobile menu.
+* **Automated Quality Control:** Ensure project quality with SonarCloud's code quality checks integrated into every pull request.
+* **Comprehensive Testing:**  Ensure reliability with a combination of Laravel Dusk and Jest tests, executed via CircleCI for continuous integration.
 
-## Features
+## Technologies Used
 
--   Laravel 10
+* **Laravel 10:** Foundation for the eCommerce backend, providing  MVC structure, Eloquent ORM, and powerful tooling.
+* **Vue 3:** Frontend framework powering a dynamic and interactive user experience.
+* **Pinia:** Vue's centralized state management solution.
+* **Stripe:** Industry-leading payment processing platform.
+* **FormKit:**  Flexible form builder with validation.
+* **Laravel Pint:** Enforces consistent code style.
+* **SonarCloud:** Monitors code quality.
+* **Laravel Dusk & Jest:** Browser and JavaScript testing.
+* **CircleCI:** Continuous integration platform.
 
--   Vue 3 with SFC and `<script setup>` syntax
+## Demonstration 🖥️
 
--   Pinia state management
+* **HOME PAGE:**
+<img src="https://github.com/CodeNeyam/laravel-vue/assets/131716933/6fc86bd0-e8fb-44a3-91d2-3d9f34bc1151" alt="homepage">
 
--   State persist with pinia-plugin-persistedstate
-
--   Product search integrated with Laravel
-
--   Order form setup with FormKit and builtin validation
-
--   Stripe for payments
-
--   Easily change currency by setting two environment variables: `CASHIER_CURRENCY` and `CASHIER_CURRENCY_LOCALE`
-
--   Code linting with Laravel Pint
-
--   CSS animations
-
--   Responsive mobile menu
-
--   SonarCloud code quality scanner integration on all pull requests
-
--   Laravel Dusk and Jest tests with CircleCI integration
-
-## Main dependencies:
-
--   `vue`: Vue.js 3, a progressive JavaScript framework
--   `vue-router`: Official router for Vue.js 3
--   `pinia`: Intuitive, type safe, light and flexible Store for Vue using the Composition API
--   `pinia-plugin-persistedstate`: Persist and rehydrate Pinia stores
--   `swiper`: Responsive image carousel with mobile touch support
--   `@stripe/stripe-js`: Stripe.js and Elements for collecting payment information
--   `@formkit/vue`: Form handling and validation for Vue 3
--   `@formkit/addons`: Addons for FormKit, including support for Stripe Elements
--   `swrv`: Stale-While-Revalidate data fetching for Vue
--   `lodash`: A modern JavaScript utility library
-
-## Setup
-
--   Fork or clone the project
-
--   Ensure you have PHP 8.2.4 or newer installed and setup properly (alternatively use Docker, see <https://laravel.com/docs/10.x/sail>)
-
--   Ensure you have access to a PostgreSQL database
-
--   Ensure you have Node installed
-
--   Rename `.env.example` to `.env` and modify the values
-
--   Run `composer install` to install the PHP dependencies with Composer. Check out <https://getcomposer.org/> if necessary
-
--   Run `npm install` to install the Node dependencies needed by the project. Check out <https://nodejs.org/en/> if necessary
-
--   Run `php artisan migrate:install` to setup the Laravel database migrations
-
--   You should create at least one sample product. Although you can use the builtin factory seeders, I prefer to do manual creation for testing purposes.
-
-    To do so run these commands after running `php artisan tinker`:
-
-    ```php
-    $product = new App\Models\Product();
-    $product->name = 'Example Product';
-    $product->slug = 'example-product';
-    $product->description = 'Example product description';
-    $product->imageUrl = 'https://placehold.co/400x400';
-    $product->price = 99;
-    $product->save();
-    ```
-
--   Run `npm run watch` to serve the Vue 3 files
-
--   Run `php artisan serve` to serve the PHP files
-
--   Open up `http://localhost:8000` in your browser
+* **ADD TO CARD:**
+<img src="https://github.com/CodeNeyam/laravel-vue/assets/131716933/ed7f272e-5907-45bc-ac27-99e7d0140878" alt="add to card">
 
 
-
-## TODO
-
--   Do WCAG analysis and ensure there are no issues
-
--   Consider adding an admin dashboard
-
--   Look into performance optimization
